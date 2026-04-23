@@ -6,6 +6,7 @@ namespace MinhasFinancas.Tests.Unit.BusinessRules;
 
 public class PessoaBusinessRulesTests
 {
+    [Trait("Category", "Unit")]
     [Theory]
     [InlineData(17, false)]
     [InlineData(18, true)]
