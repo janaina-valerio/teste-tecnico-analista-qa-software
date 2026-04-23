@@ -1,0 +1,52 @@
+name: Run Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Instalar .NET 9
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restaurar dependências
+        run: dotnet restore ./backend-tests
+
+      - name: Executar testes com cobertura
+        run: dotnet test ./backend-tests --collect:"XPlat Code Coverage"
+
+      - name: Gerar relatório de cobertura
+        run: |
+          dotnet tool install --global dotnet-reportgenerator-globaltool
+          reportgenerator -reports:backend-tests/TestResults/*/coverage.cobertura.xml -targetdir:coveragereport -reporttypes:Html
+
+  frontend-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Instalar dependências
+        run: |
+          cd frontend-tests
+          npm install
+          npx playwright install --with-deps
+
+      - name: Executar testes E2E
+        run: |
+          cd frontend-tests
+          npx playwright test
