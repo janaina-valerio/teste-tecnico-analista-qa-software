@@ -105,7 +105,7 @@ Durante a execução dos testes foram identificados os seguintes problemas:
 - Falta de validação preventiva no formulário de transações
 - Sistema permite cadastrar diversas vezes a mesma pessoa com o mesmo nome e data de nascimento
 
-***Detalhes completos: docs/bugs-encontrados.md***
+***Detalhes completos: [docs/bugs-encontrados.md](docs/bugs-encontrados.md)***
 
 
 ## 📁 Estrutura do Repositório
