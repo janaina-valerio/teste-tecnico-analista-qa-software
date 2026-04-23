@@ -6,6 +6,7 @@ namespace MinhasFinancas.Tests.Unit.BusinessRules;
 
 public class CategoriaBusinessRulesTests
 {
+    [Trait("Category", "Unit")]
     [Theory]
     [InlineData(Categoria.EFinalidade.Despesa, Transacao.ETipo.Receita, false)]
     [InlineData(Categoria.EFinalidade.Receita, Transacao.ETipo.Despesa, false)]
