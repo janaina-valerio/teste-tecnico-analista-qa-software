@@ -27,8 +27,8 @@ internal class PessoaIntegrationTests : IClassFixture<WebApplicationFactory<Prog
                 if (descriptor != null)
                     services.Remove(descriptor);
 
-                services.AddDbContext<MinhasFinancasDbContext>(options =>
-                    options.UseInMemoryDatabase("TestDb_Pessoa"));
+                   services.AddDbContext<MinhasFinancasDbContext>(options =>
+                    options.UseInMemoryDatabase(Guid.NewGuid().ToString()));
             });
         });
 
