@@ -9,6 +9,7 @@ using Xunit;
 
 namespace MinhasFinancas.Tests.Integration.Api;
 
+[Trait("Category", "Integration")]
 internal class CategoriaIntegrationTests : IClassFixture<WebApplicationFactory<Program>>
 {
     private readonly WebApplicationFactory<Program> _factory;
