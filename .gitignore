@@ -1,0 +1,21 @@
+# ❌ Código da aplicação (PROIBIDO ⛔ subir)
+frontend-tests/api/
+frontend-tests/data/
+frontend-tests/web/
+
+# ❌ Dependências
+node_modules/
+
+# ❌ Build .NET
+bin/
+obj/
+
+# ❌ Arquivos locais
+.env
+*.log
+
+# ❌ IDE / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
