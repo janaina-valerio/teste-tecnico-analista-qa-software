@@ -1,0 +1,81 @@
+###Categorias
+
+### Listar todas as Categorias
+GET http://localhost:5000/api/v1/Categorias
+
+### Criar nova Categoria
+POST http://localhost:5000/api/v1/Categorias
+Content-Type: application/json
+
+{
+  "descricao": "Moda",
+  "finalidade": 0
+}
+
+### Buscar Categoria por ID
+GET http://localhost:5000/api/v1/Categorias/019db354-0ad2-7fd1-aaea-8b6645b3a37e
+
+### Pessoas
+# Listar todas as Pessoas
+GET http://localhost:5000/api/v1/Pessoas
+
+### Criar nova Pessoa
+POST http://localhost:5000/api/v1/Pessoas
+Content-Type: application/json
+
+{
+   
+    "nome": "José Mendes",
+    "dataNascimento": "1961-09-17",
+    "idade": 68
+}
+
+### Atualizar Pessoa
+PUT http://localhost:5000/api/v1/Pessoas/019db35a-b981-738d-aa59-42260c61e45b
+Content-Type: application/json
+
+{
+  "nome": "José Mendes Atualizado",
+  "dataNascimento": "1961-09-17"
+}
+
+### Deletar Pessoa
+DELETE http://localhost:5000/api/v1/Pessoas/019db19c-b928-777c-be17-b1b0260c4c5c
+
+
+{
+    "id": "019db19c-b928-777c-be17-b1b0260c4c5c",
+    "nome": "Bryan Mendes",
+    "dataNascimento": "2020-01-10T00:00:00",
+    "idade": 3
+}
+
+### Transações
+### Listar todas as transações
+GET http://localhost:5000/api/v1/Transacoes
+
+### Criar nova transação (use IDs reais de pessoa e categoria criados antes)
+POST http://localhost:5000/api/v1/Transacoes
+Content-Type: application/json
+
+{
+      "descricao": "Unimed",
+      "valor": 780.0,
+      "tipo": 0,
+      "categoriaId": "019bf6a4-d03b-77b2-a547-31e91e3c9d71",
+      "categoriaDescricao": "Investimentos",
+      "pessoaId": "019db20e-33a6-7125-addb-7dd69c9a7544",
+      "pessoaNome": "Bianca",
+      "data": "2026-04-20"
+}
+
+### Buscar transação por ID
+GET http://localhost:5000/api/v1/Transacoes/019db365-601e-7021-972b-b756e14ea8e4
+
+
+### Totais
+### Totais por pessoa 
+GET http://localhost:5000/api/v1/Totais/pessoas
+
+### Totais por categoria
+GET http://localhost:5000/api/v1/Totais/categorias
