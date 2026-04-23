@@ -112,7 +112,7 @@ Durante a execução dos testes foram identificados os seguintes problemas:
 ```
 ├── backend-tests/          ← Testes Unitários e de Integração (.NET)
 ├── frontend-tests/         ← Testes E2E (Playwright)
-├── docs/                   ← Documentação de bugs
+├── docs/                   ← Documentação de bugs e Evidências
 ├── .github/workflows/      ← CI com GitHub Actions
 ├── README.md
 └── .gitignore
