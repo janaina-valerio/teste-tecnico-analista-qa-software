@@ -4,6 +4,7 @@ using Xunit;
 
 namespace MinhasFinancas.Tests.Unit.BusinessRules;
 
+[Trait("Category", "Unit")]
 public class TransacaoBusinessRulesTests
 {
     [Fact]
